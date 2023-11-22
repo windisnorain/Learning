@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <math.h>
+/*自定义函数-四舍五入*/
+double myround(double x)
+{
+	if (x > 0.0){
+		if (x - floor(x) >= 0.5)
+			return ceil(x);
+		else
+			return floor(x);
+	}
+	else{
+		if (x - floor(x) < 0.5)
+			return floor(x);
+		else
+			return ceil(x);
+	}
+}
+/*主函数*/
+int main(void)
+{
+	double x;
+	printf("please enter a number!\n");
+	scanf("%lf",&x);
+    while(x == 0.0){
+       printf("%f是零，请重新输入非零数！\n",x);
+		scanf("%lf",&x);
+		}
+    printf("round result is %lf\n", myround(x));
+}
