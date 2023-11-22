@@ -1,0 +1,24 @@
+1，查看系统中是否安装了git的命令：$ git
+2，在linux系统中安装git的命令:sudo apt-get install git
+3，安装完成后使用下列命令来初始配置：
+	$ git config --global user.name "Your Name"
+	$ git config --global user.email "email@example.com"
+	注：--global为全局设置选项.
+4，将当前目录变成git可以管理的版本仓库：git init
+5，把文件添加到git管理仓库进行管理：git add 文件名
+6，把文件提交到git管理仓库并添加说明：git commit -m "注释内容"
+
+7，查看仓库当前的状态：git status
+8，查看修改内容：git diff
+9，查看修改日志：git log
+10，格式查看修改日志：git log --pretty=oneline
+11，退回上一个版本：git reset --hard HEAD^ (其中几个^就代表往上第几个版本)
+	也可以用：git reset --hard "commit id" 来回溯到相应commit id的版本
+12, 查看历史命令：git reflog
+13，建立远程库和本地库的连接：git remote add origin git@github.com:username/filename.git
+14，第一次推送时命令：git push -u origin master
+15, 以后推送可用：git push origin master/git push
+16, 查看远程库的版本：git remote -v
+17, 删除远程库：git remote -rm origin
+18, 克隆远程库到本地库：git clone git@github.com:username/filename.git
+:
